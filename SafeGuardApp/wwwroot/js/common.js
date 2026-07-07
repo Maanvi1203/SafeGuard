@@ -549,7 +549,38 @@ window.SafeGuardCommon = (() => {
       window.location.href = routes[role] || '/Operator/Dashboard';
     }));
 
-    $('[data-mobile-menu]')?.addEventListener('click', () => $('.sidebar')?.classList.toggle('open'));
+    const body = document.body;
+    const sidebar = $('.sidebar');
+    const overlay = document.querySelector('[data-sidebar-overlay]');
+    function openSidebar() {
+      sidebar?.classList.add('open');
+      body.classList.add('sidebar-open');
+      if (overlay) { overlay.hidden = false; overlay.classList.add('open'); }
+      document.documentElement.style.overflow = 'hidden';
+    }
+    function closeSidebar() {
+      sidebar?.classList.remove('open');
+      body.classList.remove('sidebar-open');
+      if (overlay) { overlay.classList.remove('open'); overlay.hidden = true; }
+      document.documentElement.style.overflow = '';
+    }
+    $('[data-mobile-menu]')?.addEventListener('click', openSidebar);
+    $('[data-mobile-close]')?.addEventListener('click', closeSidebar);
+    overlay?.addEventListener('click', closeSidebar);
+    // Close on Escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeSidebar();
+    });
+    // Close sidebar when resizing to desktop to avoid stuck mobile drawer
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 767 && sidebar?.classList.contains('open')) {
+        closeSidebar();
+      }
+    });
+    // Close sidebar when a nav link is clicked on mobile
+    $all('.sidebar-nav .nav-link')?.forEach(a => a.addEventListener('click', () => {
+      if (window.innerWidth <= 767) closeSidebar();
+    }));
 
     $('[data-notification-permission]')?.addEventListener('click', async () => {
       if ('Notification' in window) {
