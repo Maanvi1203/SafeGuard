@@ -1,0 +1,68 @@
+@{
+    ViewData["Title"] = "Operator Dashboard - SafeGuard App";
+}
+
+<section class="hero-card dashboard-hero">
+    <div>
+        <h1>Validate rider reports before escalation</h1>
+        <p>Review Rider reports, play SafeGuard audio, filter noise, and escalate real risks.</p>
+        <div class="hero-actions">
+            <a class="primary-button" asp-controller="Operator" asp-action="Reports">Open Reports</a>
+            <a class="secondary-button" asp-controller="Operator" asp-action="Reports" asp-fragment="report-incident">Report Incident</a>
+            <a class="secondary-button" asp-controller="Operator" asp-action="Alerts">Live Alerts</a>
+        </div>
+    </div>
+    <img src="~/images/ttc-electric-bus.jpg" alt="TTC electric bus" />
+</section>
+
+<section class="stat-grid" data-dashboard-stats></section>
+
+<section class="grid-two">
+    <article class="panel wide-panel">
+        <div class="panel-header">
+            <div>
+                <h2>Pending Validation</h2>
+            </div>
+        </div>
+
+        <div class="table-wrap">
+            <table class="data-table" aria-label="Pending validation rider reports">
+                <thead>
+                    <tr>
+                        <th>Time</th>
+                        <th>Route / Bus ID</th>
+                        <th>Risk Type</th>
+                        <th>Location</th>
+                        <th>Audio Clip</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody data-pending-queue></tbody>
+            </table>
+        </div>
+    </article>
+
+    <aside class="panel">
+        <div class="panel-header compact">
+            <div>
+                <h2>Live AI Summary</h2>
+            </div>
+        </div>
+        <div class="audio-monitor-card">
+            <div class="waveform" aria-label="simulated waveform">
+                <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+            </div>
+            <dl>
+                <div><dt>Category</dt><dd>Aggressive Shouting</dd></div>
+                <div><dt>Confidence</dt><dd>82%</dd></div>
+                <div><dt>Vehicle Area</dt><dd>Front cabin</dd></div>
+                <div><dt>Status</dt><dd>Monitoring</dd></div>
+            </dl>
+        </div>
+    </aside>
+</section>
+
+@section Scripts {
+    <script src="~/js/operator-data.js" asp-append-version="true"></script>
+    <script src="~/js/operator-dashboard.js" asp-append-version="true"></script>
+}

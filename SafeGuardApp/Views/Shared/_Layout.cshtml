@@ -1,0 +1,99 @@
+@inject Microsoft.Extensions.Configuration.IConfiguration Configuration
+@{
+    var role = (ViewData["Role"] as string) ?? "Operator";
+    var activePage = (ViewData["ActivePage"] as string) ?? "Dashboard";
+    var pageTitle = ViewData["Title"] as string ?? $"{activePage} - SafeGuard App";
+    var googleMapsApiKey = Configuration["GoogleMaps:ApiKey"] ?? System.Environment.GetEnvironmentVariable("GOOGLE_MAPS_API_KEY") ?? string.Empty;
+    var navItems = new[]
+    {
+        new { Label = "Dashboard", Action = "Dashboard", Icon = "safety.svg" },
+        new { Label = "Reports", Action = "Reports", Icon = "action-check.svg" },
+        new { Label = "Alerts", Action = "Alerts", Icon = "notification.svg" },
+        new { Label = "Action", Action = "Action", Icon = "emergency.svg" },
+        new { Label = "Settings", Action = "Settings", Icon = "more-horizontal.svg" }
+    };
+    var roles = new[] { "Operator", "Rider", "Management", "Admin" };
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@pageTitle</title>
+    <meta name="google-maps-api-key" content="@googleMapsApiKey" />
+    <link rel="stylesheet" href="~/css/safeguard.css" asp-append-version="true" />
+</head>
+<body data-role="@role" data-active-page="@activePage">
+    <div class="app-shell">
+        <aside class="sidebar" aria-label="Primary navigation">
+            <a class="brand" asp-controller="@role" asp-action="Dashboard" aria-label="SafeGuard dashboard">
+                <img src="~/images/ttc-logo.png" alt="TTC logo" />
+                <span><strong>SafeGuard</strong></span>
+            </a>
+
+            <nav class="sidebar-nav">
+                @foreach (var item in navItems)
+                {
+                    var active = item.Label == activePage ? "active" : "";
+                    <a class="nav-link @active" asp-controller="@role" asp-action="@item.Action">
+                        <img src="~/icons/@item.Icon" alt="" />
+                        <span>@item.Label</span>
+                    </a>
+                }
+            </nav>
+
+            <div class="sidebar-status">
+                <span class="status-dot"></span>
+                <div>
+                    <strong>Online</strong>
+                    <small>SafeGuard audio</small>
+                </div>
+            </div>
+        </aside>
+
+        <div class="main-column">
+            <header class="topbar">
+                <button class="icon-button mobile-menu" type="button" aria-label="Open navigation" data-mobile-menu>
+                    <img src="~/icons/more-horizontal.svg" alt="" />
+                </button>
+
+                <div class="topbar-title">
+                    <strong>@activePage</strong>
+                </div>
+
+                <div class="topbar-actions">
+                    <button class="ghost-button" type="button" data-notification-permission>
+                        <img src="~/icons/notification.svg" alt="" />
+                        Toasts
+                    </button>
+
+                    <div class="role-switcher">
+                        <button class="role-button" type="button" data-role-toggle>
+                            <img src="~/icons/security-user.svg" alt="" />
+                            <span>@role</span>
+                            <span aria-hidden="true">▼</span>
+                        </button>
+                        <div class="role-menu" data-role-menu>
+                            @foreach (var option in roles)
+                            {
+                                var selected = option == role ? "selected" : "";
+                                <button type="button" data-role-option="@option" class="@selected">@option</button>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <main class="content">
+                @RenderBody()
+            </main>
+        </div>
+    </div>
+
+    <div class="toast-region" aria-live="polite" aria-atomic="true" data-toast-region></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/8.0.7/signalr.min.js" integrity="sha512-HhlGjX+oA97LAtLTVjXqZfYj+eaa7E6ObRbD1csiyf3b9qx9rNAgorUMK1SeBRIhCBRRdPhGz1R0yvjDXfnhBQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="~/js/common.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

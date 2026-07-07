@@ -1,0 +1,26 @@
+[
+  {
+    "role": "Operator",
+    "title": "Operator Risk & Response Guide",
+    "file": "/documents/operator-risk-response-guide.pdf",
+    "description": "Operator risks, precautions, validation actions, and escalation guidance."
+  },
+  {
+    "role": "Rider",
+    "title": "Rider Safety & Precautions Guide",
+    "file": "/documents/rider-safety-precautions-guide.pdf",
+    "description": "Rider risks, safety precautions, reporting guidance, and help options."
+  },
+  {
+    "role": "Management",
+    "title": "Management Risk Oversight Guide",
+    "file": "/documents/management-risk-oversight-guide.pdf",
+    "description": "Escalation review, hotspot analysis, response tracking, and prevention planning."
+  },
+  {
+    "role": "Admin",
+    "title": "Admin System Safety & Governance Guide",
+    "file": "/documents/admin-system-safety-guide.pdf",
+    "description": "Access control, alert rules, media retention, audit logs, and integration health."
+  }
+]

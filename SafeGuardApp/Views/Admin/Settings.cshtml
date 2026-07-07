@@ -1,0 +1,66 @@
+@{
+    ViewData["Title"] = "Admin Settings - SafeGuard App";
+}
+
+<section class="page-heading">
+    <div>
+        <h1>System Settings</h1>
+        <p>Manage roles, permissions, risk rules, media documents, and alert configuration.</p>
+    </div>
+</section>
+
+<section class="settings-grid">
+    <article class="panel">
+        <div class="panel-header compact"><div><h2>Access control</h2></div></div>
+        <div class="table-wrap">
+            <table class="data-table" aria-label="User access table">
+                <thead><tr><th>User</th><th>Role</th><th>Access</th><th>Status</th></tr></thead>
+                <tbody data-admin-users></tbody>
+            </table>
+        </div>
+    </article>
+    <article class="panel">
+        <div class="panel-header compact"><div><h2>Alert rules</h2></div></div>
+        <label class="toggle-row"><span>Auto-escalate Immediate Assistance</span><input type="checkbox" data-admin-setting="autoEscalate" checked /></label>
+        <label class="toggle-row"><span>Enable SignalR popups</span><input type="checkbox" data-admin-setting="signalR" checked /></label>
+        <label class="toggle-row"><span>Enable video risk flagging</span><input type="checkbox" data-admin-setting="video" checked /></label>
+    </article>
+</section>
+
+
+<section class="panel">
+    <div class="panel-header">
+        <div>
+            <h2>Media Documents</h2>
+            <p>Upload approved safety documents, reference media, or training evidence.</p>
+        </div>
+    </div>
+    <form class="incident-form compact-upload-form" data-admin-media-form>
+        <label>Document Category
+            <select name="category">
+                <option value="documents">Documents</option>
+                <option value="training">Training</option>
+                <option value="evidence">Evidence</option>
+            </select>
+        </label>
+        <label>Upload Files
+            <input type="file" name="mediaFiles" data-media-upload multiple accept="image/*,video/*,audio/*,.pdf,.doc,.docx,.txt" />
+        </label>
+        <div class="media-preview" data-media-preview><small>No files selected.</small></div>
+        <div class="form-actions">
+            <button class="primary-button" type="submit">Upload Media</button>
+            <button class="ghost-button" type="button" data-refresh-media-library>Refresh Library</button>
+        </div>
+    </form>
+    <div class="media-library" data-admin-media-library></div>
+</section>
+
+<section class="panel document-panel">
+    <div class="panel-header"><div><h2>Admin guide</h2></div><div class="button-group"><a class="secondary-button" href="~/documents/admin-system-safety-guide.pdf" target="_blank" rel="noopener">Admin Guide</a><a class="ghost-button" href="~/documents/TTC_Bus_Routes_by_Operating_Division_Report.docx" target="_blank" rel="noopener">Routes DOCX</a></div></div>
+    <iframe class="pdf-viewer" src="~/documents/admin-system-safety-guide.pdf" title="Admin System Safety and Governance Guide PDF"></iframe>
+</section>
+
+@section Scripts {
+    <script src="~/js/operator-data.js" asp-append-version="true"></script>
+    <script src="~/js/admin-settings.js" asp-append-version="true"></script>
+}

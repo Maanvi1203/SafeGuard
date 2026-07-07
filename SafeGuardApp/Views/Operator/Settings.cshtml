@@ -1,0 +1,59 @@
+@{
+    ViewData["Title"] = "Operator Settings - SafeGuard App";
+}
+
+<section class="page-heading">
+    <div>
+        <h1>Settings</h1>
+        <p>Manage notifications, profile, and risk reference.</p>
+    </div>
+</section>
+
+<section class="settings-grid">
+    <article class="panel">
+        <div class="panel-header compact">
+            <div>
+                <h2>Report alerts</h2>
+            </div>
+        </div>
+        <label class="toggle-row">
+            <span>Sound for new reports</span>
+            <input type="checkbox" data-setting="sound" checked />
+        </label>
+        <label class="toggle-row">
+            <span>Browser toast for new reports</span>
+            <input type="checkbox" data-setting="toast" checked />
+        </label>
+    </article>
+
+    <article class="panel profile-card">
+        <div class="panel-header compact">
+            <div>
+                <h2>Operator assignment</h2>
+            </div>
+        </div>
+        <dl>
+            <div><dt>Name</dt><dd>@ViewData["OperatorName"]</dd></div>
+            <div><dt>Depot</dt><dd>@ViewData["Depot"]</dd></div>
+            <div><dt>Shift</dt><dd>@ViewData["Shift"]</dd></div>
+        </dl>
+    </article>
+</section>
+
+<section class="panel document-panel">
+    <div class="panel-header">
+        <div>
+            <h2>Operator risk guide</h2>
+        </div>
+        <div class="button-group">
+            <a class="secondary-button" href="~/documents/operator-risk-response-guide.pdf" target="_blank" rel="noopener">Open PDF</a>
+            <a class="ghost-button" href="~/documents/TTC_Operator_Safety_Risk_Assessment.docx" target="_blank" rel="noopener">Source DOCX</a>
+        </div>
+    </div>
+    <iframe class="pdf-viewer" src="~/documents/operator-risk-response-guide.pdf" title="Operator Risk and Response Guide PDF"></iframe>
+</section>
+
+@section Scripts {
+    <script src="~/js/operator-data.js" asp-append-version="true"></script>
+    <script src="~/js/operator-settings.js" asp-append-version="true"></script>
+}

@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: safeguard-app
+    runtime: docker
+    plan: free
+    region: ohio
+    branch: main
+    rootDir: SafeGuardApp
+    dockerfilePath: Dockerfile
+    healthCheckPath: /healthz
+    envVars:
+      - key: ASPNETCORE_ENVIRONMENT
+        value: Production
+      - key: ASPNETCORE_FORWARDEDHEADERS_ENABLED
+        value: "true"
+      - key: GOOGLE_MAPS_API_KEY
+        sync: false

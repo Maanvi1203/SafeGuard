@@ -1,0 +1,39 @@
+@{
+    ViewData["Title"] = "Management Dashboard - SafeGuard App";
+}
+
+<section class="hero-card dashboard-hero">
+    <div>
+        <h1>Monitor safety trends and response performance</h1>
+        <p>Review operator-validated risks, depot trends, escalation volume, and action completion.</p>
+        <div class="hero-actions">
+            <a class="primary-button" asp-controller="Management" asp-action="Reports">Review Reports</a>
+            <a class="secondary-button" asp-controller="Management" asp-action="Alerts">Escalated Alerts</a>
+            <a class="secondary-button" asp-controller="Management" asp-action="Action">Response Actions</a>
+        </div>
+    </div>
+    <img src="~/images/ttc-electric-bus.jpg" alt="TTC electric bus" />
+</section>
+
+<section class="stat-grid" data-management-stats></section>
+
+<section class="grid-two">
+    <article class="panel">
+        <div class="panel-header"><div><h2>Risk trend by type</h2></div><span class="pill">Today</span></div>
+        <div class="trend-list" data-management-risk-trends></div>
+    </article>
+    <article class="panel">
+        <div class="panel-header"><div><h2>Depot focus</h2></div><span class="pill danger">Eglinton</span></div>
+        <div class="table-wrap">
+            <table class="data-table" aria-label="Depot focus reports">
+                <thead><tr><th>Route</th><th>Division</th><th>Open</th><th>Escalated</th></tr></thead>
+                <tbody data-management-depot-table></tbody>
+            </table>
+        </div>
+    </article>
+</section>
+
+@section Scripts {
+    <script src="~/js/operator-data.js" asp-append-version="true"></script>
+    <script src="~/js/management-dashboard.js" asp-append-version="true"></script>
+}

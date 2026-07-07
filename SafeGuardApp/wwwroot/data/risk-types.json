@@ -1,0 +1,197 @@
+{
+  "source": "TTC_Operator_Safety_Risk_Assessment.docx",
+  "items": [
+    {
+      "category": "Passenger violence",
+      "scenario": "Physical assault on driver/operator",
+      "severity": "Immediate Assistance",
+      "immediateAssistance": "Yes",
+      "operatorResponse": "Panic button; silent alarm; auto-share vehicle ID, route, location, and camera/audio snapshot.",
+      "audioRelated": false
+    },
+    {
+      "category": "Weapons threat",
+      "scenario": "Passenger seen with weapon or threat involving firearm/knife",
+      "severity": "Immediate Assistance",
+      "immediateAssistance": "Yes",
+      "operatorResponse": "Silent alarm; request police/security; mark as high priority; preserve evidence.",
+      "audioRelated": false
+    },
+    {
+      "category": "Gunshot audio trigger",
+      "scenario": "App detects gunshot-like sound inside or near vehicle",
+      "severity": "Immediate Assistance",
+      "immediateAssistance": "Yes",
+      "operatorResponse": "High-priority audio alert; share location; recommend stop/evacuation procedure based on policy.",
+      "audioRelated": true
+    },
+    {
+      "category": "Glass break audio trigger",
+      "scenario": "Window, door, shelter, or vehicle glass breaking",
+      "severity": "High",
+      "immediateAssistance": "Often",
+      "operatorResponse": "Audio alert; identify cabin zone; notify Transit Control; prompt damage/security report.",
+      "audioRelated": true
+    },
+    {
+      "category": "Scream/panic audio trigger",
+      "scenario": "Passenger scream, panic call, or distress sound",
+      "severity": "High",
+      "immediateAssistance": "Often",
+      "operatorResponse": "Alert driver; show nearest safe stop; suggest cabin camera check and control notification.",
+      "audioRelated": true
+    },
+    {
+      "category": "Fight onboard",
+      "scenario": "Physical fight or aggressive group inside vehicle",
+      "severity": "Immediate Assistance",
+      "immediateAssistance": "Yes",
+      "operatorResponse": "Request security; onboard announcement; live location pin; incident timer.",
+      "audioRelated": false
+    },
+    {
+      "category": "Forced door/boarding issue",
+      "scenario": "Passenger forces doors, blocks closing, or attempts unsafe entry",
+      "severity": "High",
+      "immediateAssistance": "Sometimes",
+      "operatorResponse": "Door safety alert; hold vehicle safely; notify control; log incident.",
+      "audioRelated": false
+    },
+    {
+      "category": "Medical emergency",
+      "scenario": "Passenger collapse, injury, overdose, or severe distress",
+      "severity": "Immediate Assistance",
+      "immediateAssistance": "Yes",
+      "operatorResponse": "Call emergency support; notify control; show nearest stop/intersection; prompt first-aid procedure.",
+      "audioRelated": false
+    },
+    {
+      "category": "Driver harassment/threats",
+      "scenario": "Verbal abuse, hate speech, intimidation, threats",
+      "severity": "High",
+      "immediateAssistance": "Sometimes",
+      "operatorResponse": "Quick report; de-escalation prompt; request supervisor/security if escalating.",
+      "audioRelated": false
+    },
+    {
+      "category": "Fare/payment dispute",
+      "scenario": "Conflict over fare, transfer, or payment rules",
+      "severity": "Medium",
+      "immediateAssistance": "No/Maybe",
+      "operatorResponse": "Log incident; suggested de-escalation script; escalate if threats begin.",
+      "audioRelated": false
+    },
+    {
+      "category": "Intoxicated/distressed rider",
+      "scenario": "Unpredictable behaviour, substance use, person in crisis",
+      "severity": "Medium",
+      "immediateAssistance": "Maybe",
+      "operatorResponse": "Monitor; notify control; request outreach/security depending on behaviour.",
+      "audioRelated": false
+    },
+    {
+      "category": "Aggressive shouting audio trigger",
+      "scenario": "Raised voices or escalating argument detected",
+      "severity": "Medium",
+      "immediateAssistance": "Maybe",
+      "operatorResponse": "Moderate alert; confidence score; ask driver to confirm if safe.",
+      "audioRelated": true
+    },
+    {
+      "category": "Unattended bag/package",
+      "scenario": "Suspicious package left onboard or near stop",
+      "severity": "High",
+      "immediateAssistance": "Maybe",
+      "operatorResponse": "Report package; share location; follow TTC procedure; avoid handling package.",
+      "audioRelated": false
+    },
+    {
+      "category": "Vandalism/property damage",
+      "scenario": "Graffiti, seat damage, broken equipment, tampering",
+      "severity": "Medium",
+      "immediateAssistance": "No/Maybe",
+      "operatorResponse": "Capture report; attach photo/video; request security if active.",
+      "audioRelated": false
+    },
+    {
+      "category": "Crowding near operator area",
+      "scenario": "Passengers blocking driver area or interfering with operation",
+      "severity": "Medium",
+      "immediateAssistance": "No/Maybe",
+      "operatorResponse": "Onboard announcement; notify control if persistent; log route/stop hotspot.",
+      "audioRelated": false
+    },
+    {
+      "category": "Route hazard/collision risk",
+      "scenario": "Road hazard, unsafe stop area, collision, blocked lane",
+      "severity": "High",
+      "immediateAssistance": "Sometimes",
+      "operatorResponse": "Route alert; request supervisor; share incident location; suggest safe stopping area.",
+      "audioRelated": false
+    },
+    {
+      "category": "Late-night/isolated stop risk",
+      "scenario": "Higher vulnerability at remote stop or low-passenger route segment",
+      "severity": "Medium",
+      "immediateAssistance": "No/Maybe",
+      "operatorResponse": "Route risk indicator; optional check-in; nearby assistance info.",
+      "audioRelated": false
+    },
+    {
+      "category": "Service delay frustration",
+      "scenario": "Passenger anger due to delays, detours, crowding",
+      "severity": "Medium",
+      "immediateAssistance": "No/Maybe",
+      "operatorResponse": "Delay announcement script; alert control; monitor for escalation.",
+      "audioRelated": false
+    },
+    {
+      "category": "Communication failure",
+      "scenario": "Cellular/data outage or failure to reach Transit Control",
+      "severity": "High",
+      "immediateAssistance": "Maybe",
+      "operatorResponse": "Offline event logging; retry queue; fallback phone number; show connection status.",
+      "audioRelated": false
+    },
+    {
+      "category": "Driver distraction",
+      "scenario": "Too many alerts or complex interface while driving",
+      "severity": "High",
+      "immediateAssistance": "Preventive",
+      "operatorResponse": "Hands-free voice alerts; large buttons; suppress low-confidence alerts; no typing while moving.",
+      "audioRelated": false
+    },
+    {
+      "category": "False positive audio detection",
+      "scenario": "Glass break/gunshot/scream incorrectly classified",
+      "severity": "Low/Medium",
+      "immediateAssistance": "No",
+      "operatorResponse": "Show confidence score; allow one-tap confirm/dismiss; retain event for model improvement.",
+      "audioRelated": true
+    },
+    {
+      "category": "Camera/audio blind spot",
+      "scenario": "Incident occurs outside monitored zone",
+      "severity": "Medium",
+      "immediateAssistance": "No/Maybe",
+      "operatorResponse": "Show sensor coverage status; allow manual incident report.",
+      "audioRelated": true
+    },
+    {
+      "category": "Privacy and data retention",
+      "scenario": "Audio/video captures passengers or sensitive data",
+      "severity": "Medium",
+      "immediateAssistance": "Policy Required",
+      "operatorResponse": "Role-based access; retention limits; audit logs; clear privacy notice.",
+      "audioRelated": false
+    },
+    {
+      "category": "Cybersecurity/data breach",
+      "scenario": "Location, audio, or incident data exposed",
+      "severity": "High",
+      "immediateAssistance": "Technical Response",
+      "operatorResponse": "Encryption, access control, monitoring, breach response plan.",
+      "audioRelated": false
+    }
+  ]
+}

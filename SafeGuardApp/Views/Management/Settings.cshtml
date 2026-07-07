@@ -1,0 +1,37 @@
+@{
+    ViewData["Title"] = "Management Settings - SafeGuard App";
+}
+
+<section class="page-heading">
+    <div>
+        <h1>Settings</h1>
+        <p>Configure management notifications, depot scope, and read-only risk references.</p>
+    </div>
+</section>
+
+<section class="settings-grid">
+    <article class="panel">
+        <div class="panel-header compact"><div><h2>Notifications</h2></div></div>
+        <label class="toggle-row"><span>Escalation sound</span><input type="checkbox" data-management-setting="sound" checked /></label>
+        <label class="toggle-row"><span>Browser toast alerts</span><input type="checkbox" data-management-setting="toast" checked /></label>
+        <label class="toggle-row"><span>Daily safety summary</span><input type="checkbox" data-management-setting="summary" checked /></label>
+    </article>
+    <article class="panel">
+        <div class="panel-header compact"><div><h2>Management scope</h2></div></div>
+        <dl>
+            <div><dt>Name</dt><dd>Management User</dd></div>
+            <div><dt>Scope</dt><dd>All divisions</dd></div>
+            <div><dt>Primary view</dt><dd>Escalations and trends</dd></div>
+        </dl>
+    </article>
+</section>
+
+<section class="panel document-panel">
+    <div class="panel-header"><div><h2>Management guide</h2></div><a class="secondary-button" href="~/documents/management-risk-oversight-guide.pdf" target="_blank" rel="noopener">Open PDF</a></div>
+    <iframe class="pdf-viewer" src="~/documents/management-risk-oversight-guide.pdf" title="Management Risk Oversight Guide PDF"></iframe>
+</section>
+
+@section Scripts {
+    <script src="~/js/operator-data.js" asp-append-version="true"></script>
+    <script src="~/js/management-settings.js" asp-append-version="true"></script>
+}

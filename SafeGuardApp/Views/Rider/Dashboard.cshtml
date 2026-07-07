@@ -1,0 +1,66 @@
+@{
+    ViewData["Title"] = "Rider Dashboard - SafeGuard App";
+}
+
+<section class="hero-card dashboard-hero">
+    <div>
+        <h1>Report safety concerns from transit</h1>
+        <p>Submit an incident, check report status, and follow safety guidance while SafeGuard routes urgent risks to operators.</p>
+        <div class="hero-actions">
+            <a class="primary-button" asp-controller="Rider" asp-action="Reports" asp-fragment="new-report">Report Incident</a>
+            <a class="secondary-button" asp-controller="Rider" asp-action="Alerts">Safety Alerts</a>
+            <a class="secondary-button" asp-controller="Rider" asp-action="Action">Request Help</a>
+        </div>
+    </div>
+    <img src="~/images/ttc-electric-bus.jpg" alt="TTC electric bus" />
+</section>
+
+<section class="stat-grid" data-rider-stats></section>
+
+<section class="grid-two">
+    <article class="panel">
+        <div class="panel-header">
+            <div>
+                <h2>My recent reports</h2>
+            </div>
+            <a class="ghost-button" asp-controller="Rider" asp-action="Reports">View all</a>
+        </div>
+        <div class="table-wrap">
+            <table class="data-table" aria-label="Rider recent reports">
+                <thead>
+                    <tr>
+                        <th>Time</th>
+                        <th>Status</th>
+                        <th>Risk Type</th>
+                        <th>Route / Bus</th>
+                        <th>Location</th>
+                    </tr>
+                </thead>
+                <tbody data-rider-recent></tbody>
+            </table>
+        </div>
+    </article>
+
+    <aside class="panel">
+        <div class="panel-header compact">
+            <div>
+                <h2>Current trip</h2>
+            </div>
+            <span class="pill">Route 54</span>
+        </div>
+        <dl>
+            <div><dt>Route</dt><dd>54 Lawrence East</dd></div>
+            <div><dt>Bus ID</dt><dd>3700</dd></div>
+            <div><dt>Direction</dt><dd>Eastbound</dd></div>
+            <div><dt>Nearest stop</dt><dd>Morningside Ave</dd></div>
+        </dl>
+        <div class="hero-actions">
+            <a class="primary-button" asp-controller="Rider" asp-action="Reports" asp-fragment="new-report">Report</a>
+        </div>
+    </aside>
+</section>
+
+@section Scripts {
+    <script src="~/js/operator-data.js" asp-append-version="true"></script>
+    <script src="~/js/rider-dashboard.js" asp-append-version="true"></script>
+}

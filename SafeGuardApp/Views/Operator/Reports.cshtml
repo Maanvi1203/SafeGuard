@@ -1,0 +1,170 @@
+@{
+    ViewData["Title"] = "Operator Reports - SafeGuard App";
+}
+
+<section class="page-heading">
+    <div>
+        <h1>Assigned Reports</h1>
+        <p>Filter reports, inspect details, and choose an action.</p>
+    </div>
+    <button class="primary-button" type="button" data-open-incident-form>
+        <img src="~/icons/action-check.svg" alt="" />
+        Report Incident
+    </button>
+</section>
+
+<section class="filter-bar" aria-label="Report filters">
+    <label>Status
+        <select data-filter-status>
+            <option value="All">All</option>
+            <option value="Pending">Pending</option>
+            <option value="Acknowledged">Acknowledged</option>
+            <option value="Escalated">Escalated</option>
+            <option value="Closed">Closed</option>
+        </select>
+    </label>
+    <label>Source
+        <select data-filter-source>
+            <option value="All">All</option>
+            <option value="Rider">Rider</option>
+            <option value="Operator">Operator</option>
+        </select>
+    </label>
+    <label>Date
+        <input type="date" data-filter-date />
+    </label>
+    <label>Risk Type
+        <select data-filter-risk>
+            <option value="All">All</option>
+        </select>
+    </label>
+    <button class="ghost-button" type="button" data-clear-filters>Clear filters</button>
+</section>
+
+<section class="panel">
+    <div class="panel-header">
+        <div>
+            <h2>Operator assignment queue</h2>
+        </div>
+        <span class="pill" data-report-count>0 reports</span>
+    </div>
+    <div class="table-wrap">
+        <table class="data-table selectable" aria-label="Assigned operator reports">
+            <thead>
+                <tr>
+                    <th>Time</th>
+                    <th>Status</th>
+                    <th>Source</th>
+                    <th>Route / Bus</th>
+                    <th>Risk Type</th>
+                    <th>Location</th>
+                    <th>Confidence</th>
+                    <th>Open</th>
+                </tr>
+            </thead>
+            <tbody data-report-list></tbody>
+        </table>
+    </div>
+</section>
+
+<aside class="drawer" data-report-drawer aria-hidden="true">
+    <div class="drawer-header">
+        <div>
+            <h2 data-drawer-title>Report</h2>
+        </div>
+        <button class="icon-button" type="button" data-close-drawer aria-label="Close report detail">×</button>
+    </div>
+    <div class="drawer-content" data-drawer-content></div>
+</aside>
+
+<aside class="drawer" data-incident-drawer aria-hidden="true">
+    <div class="drawer-header">
+        <div>
+            <h2>Report Incident</h2>
+        </div>
+        <button class="icon-button" type="button" data-close-incident-form aria-label="Close incident form">×</button>
+    </div>
+    <form class="drawer-content incident-form" data-operator-incident-form>
+        <section class="detail-section">
+            <h3>Incident</h3>
+            <label>Risk Type
+                <select name="riskType" data-incident-risk required></select>
+            </label>
+            <label>Severity
+                <select name="severity" required>
+                    <option>Medium</option>
+                    <option>High</option>
+                    <option>Immediate Assistance</option>
+                    <option>Low/Medium</option>
+                </select>
+            </label>
+            <label>Details
+                <textarea name="details" rows="4" placeholder="Briefly describe what happened." required></textarea>
+            </label>
+        </section>
+        <section class="detail-section">
+            <h3>Route context</h3>
+            <label>Route
+                <input name="route" value="54 Lawrence East" required />
+            </label>
+            <label>Bus ID
+                <input name="busId" value="3700" required />
+            </label>
+            <label>Direction
+                <input name="direction" value="Eastbound" required />
+            </label>
+            <label>Location
+                <input name="location" value="Lawrence Ave E & Morningside Ave" required data-location-address />
+            </label>
+            <div class="location-tool" data-location-picker>
+                <button class="ghost-button" type="button" data-locate-current>
+                    <img src="~/icons/map-pin.svg" alt="" />
+                    Use Live Location
+                </button>
+                <span data-location-status>Location not captured.</span>
+                <input type="hidden" name="latitude" data-location-lat />
+                <input type="hidden" name="longitude" data-location-lng />
+                <input type="hidden" name="locationAccuracy" data-location-accuracy />
+                <input type="hidden" name="locationSource" data-location-source />
+                <div class="google-map" data-location-map hidden></div>
+            </div>
+            <label>Nearest Stop
+                <input name="nearestStop" value="Morningside Ave at Lawrence Ave East" />
+            </label>
+        </section>
+        <section class="detail-section">
+            <h3>Evidence Uploads</h3>
+            <div class="voice-recorder" data-voice-recorder>
+                <div>
+                    <strong>Voice Note</strong>
+                    <small>Record a short audio note with incident context.</small>
+                </div>
+                <div class="voice-controls">
+                    <button class="ghost-button" type="button" data-voice-start>Record</button>
+                    <button class="ghost-button" type="button" data-voice-stop disabled>Stop</button>
+                    <button class="ghost-button" type="button" data-voice-clear disabled>Clear</button>
+                </div>
+                <audio controls preload="none" data-voice-playback hidden></audio>
+                <span data-voice-status>No voice note recorded.</span>
+            </div>
+            <label>Attach Media
+                <input type="file" name="mediaFiles" data-media-upload multiple accept="image/*,video/*,audio/*,.pdf,.doc,.docx,.txt" />
+            </label>
+            <p class="upload-help">Attach photos, short videos, audio clips, PDFs, notes, or a recorded voice note. Maximum 50 MB per file.</p>
+            <div class="media-preview" data-media-preview><small>No files selected.</small></div>
+            <label>Media Notes
+                <textarea name="mediaNotes" rows="3" placeholder="Camera zone, rider area, or other evidence context."></textarea>
+            </label>
+        </section>
+        <div class="form-actions sticky-actions">
+            <button class="primary-button" type="submit">Submit Incident</button>
+            <button class="ghost-button" type="button" data-close-incident-form>Cancel</button>
+        </div>
+    </form>
+</aside>
+<div class="drawer-backdrop" data-drawer-backdrop></div>
+
+@section Scripts {
+    <script src="~/js/operator-data.js" asp-append-version="true"></script>
+    <script src="~/js/operator-reports.js" asp-append-version="true"></script>
+}

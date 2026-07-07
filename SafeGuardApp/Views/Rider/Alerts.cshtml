@@ -1,0 +1,32 @@
+@{
+    ViewData["Title"] = "Rider Alerts - SafeGuard App";
+}
+
+<section class="page-heading">
+    <div>
+        <h1>Safety Alerts</h1>
+        <p>View public alerts and updates related to your route or recent reports.</p>
+    </div>
+    <button class="primary-button" type="button" data-rider-test-toast><img src="~/icons/notification.svg" alt="" /> Test Toast</button>
+</section>
+
+<section class="grid-two">
+    <article class="panel">
+        <div class="panel-header"><div><h2>Route alerts</h2></div><span class="pill">Route 54</span></div>
+        <div class="alert-feed" data-rider-alert-feed></div>
+    </article>
+    <aside class="panel">
+        <div class="panel-header compact"><div><h2>Safety guidance</h2></div></div>
+        <ul class="activity-log">
+            <li>Move away from active conflict when safe.</li>
+            <li>Use Report Incident to share route, bus, and location.</li>
+            <li>Call emergency services directly for immediate danger.</li>
+            <li>Follow operator announcements and exit only when safe.</li>
+        </ul>
+    </aside>
+</section>
+
+@section Scripts {
+    <script src="~/js/operator-data.js" asp-append-version="true"></script>
+    <script src="~/js/rider-alerts.js" asp-append-version="true"></script>
+}

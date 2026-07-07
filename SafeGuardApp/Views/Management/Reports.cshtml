@@ -1,0 +1,53 @@
+@{
+    ViewData["Title"] = "Management Reports - SafeGuard App";
+}
+
+<section class="page-heading">
+    <div>
+        <h1>Validated Reports</h1>
+        <p>Review system-wide reports, operator decisions, and response history.</p>
+    </div>
+</section>
+
+<section class="filter-bar" aria-label="Management report filters">
+    <label>Status
+        <select data-management-status-filter>
+            <option value="All">All</option>
+            <option value="Pending">Pending</option>
+            <option value="Acknowledged">Acknowledged</option>
+            <option value="Escalated">Escalated</option>
+            <option value="Closed">Closed</option>
+        </select>
+    </label>
+    <label>Source
+        <select data-management-source-filter>
+            <option value="All">All</option>
+            <option value="Rider">Rider</option>
+            <option value="Operator">Operator</option>
+        </select>
+    </label>
+    <label>Risk Type
+        <select data-management-risk-filter><option value="All">All</option></select>
+    </label>
+</section>
+
+<section class="panel">
+    <div class="panel-header"><div><h2>Report review</h2></div><span class="pill" data-management-report-count>0 reports</span></div>
+    <div class="table-wrap">
+        <table class="data-table" aria-label="Management report review">
+            <thead><tr><th>Time</th><th>Status</th><th>Source</th><th>Route / Bus</th><th>Risk</th><th>Division</th><th>Action</th></tr></thead>
+            <tbody data-management-report-list></tbody>
+        </table>
+    </div>
+</section>
+
+<aside class="drawer" data-management-drawer aria-hidden="true">
+    <div class="drawer-header"><div><h2 data-management-drawer-title>Report</h2></div><button class="icon-button" type="button" data-management-close-drawer>×</button></div>
+    <div class="drawer-content" data-management-drawer-content></div>
+</aside>
+<div class="drawer-backdrop" data-management-backdrop></div>
+
+@section Scripts {
+    <script src="~/js/operator-data.js" asp-append-version="true"></script>
+    <script src="~/js/management-reports.js" asp-append-version="true"></script>
+}

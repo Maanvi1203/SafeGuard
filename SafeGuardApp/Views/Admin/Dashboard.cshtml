@@ -1,0 +1,39 @@
+@{
+    ViewData["Title"] = "Admin Dashboard - SafeGuard App";
+}
+
+<section class="hero-card dashboard-hero">
+    <div>
+        <h1>Control system safety operations</h1>
+        <p>Manage escalated alerts, user access, risk rules, media references, and system configuration.</p>
+        <div class="hero-actions">
+            <a class="primary-button" asp-controller="Admin" asp-action="Alerts">Admin Alerts</a>
+            <a class="secondary-button" asp-controller="Admin" asp-action="Reports">All Reports</a>
+            <a class="secondary-button" asp-controller="Admin" asp-action="Settings">System Settings</a>
+        </div>
+    </div>
+    <img src="~/images/ttc-electric-bus.jpg" alt="TTC electric bus" />
+</section>
+
+<section class="stat-grid" data-admin-stats></section>
+
+<section class="grid-two">
+    <article class="panel">
+        <div class="panel-header"><div><h2>Admin escalation queue</h2></div><span class="pill danger">Live</span></div>
+        <div class="alert-feed" data-admin-escalation-queue></div>
+    </article>
+    <article class="panel">
+        <div class="panel-header"><div><h2>System health</h2></div><span class="pill">Online</span></div>
+        <dl>
+            <div><dt>SignalR alerts</dt><dd>Connected</dd></div>
+            <div><dt>Audio detection</dt><dd>Active</dd></div>
+            <div><dt>Video analysis</dt><dd>Worker ready</dd></div>
+            <div><dt>Document store</dt><dd>Available</dd></div>
+        </dl>
+    </article>
+</section>
+
+@section Scripts {
+    <script src="~/js/operator-data.js" asp-append-version="true"></script>
+    <script src="~/js/admin-dashboard.js" asp-append-version="true"></script>
+}

@@ -1,0 +1,29 @@
+@{
+    ViewData["Title"] = "Operator Alerts - SafeGuard App";
+}
+
+<section class="page-heading">
+    <div>
+        <h1>Live Alerts Feed</h1>
+        <p>Alerts are scoped to the operator’s depot and route.</p>
+    </div>
+    <button class="primary-button" type="button" data-simulate-alert>
+        <img src="~/icons/notification.svg" alt="" />
+        Test Alert Toast
+    </button>
+</section>
+
+<section class="panel">
+    <div class="panel-header">
+        <div>
+            <h2>Relevant operator alerts</h2>
+        </div>
+        <span class="pill danger">Eglinton Division</span>
+    </div>
+    <div class="alert-feed" data-live-alerts></div>
+</section>
+
+@section Scripts {
+    <script src="~/js/operator-data.js" asp-append-version="true"></script>
+    <script src="~/js/operator-alerts.js" asp-append-version="true"></script>
+}

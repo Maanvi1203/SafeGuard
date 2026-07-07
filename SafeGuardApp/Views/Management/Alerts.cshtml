@@ -1,0 +1,32 @@
+@{
+    ViewData["Title"] = "Management Alerts - SafeGuard App";
+}
+
+<section class="page-heading">
+    <div>
+        <h1>Escalated Alerts</h1>
+        <p>Track high-priority risks by depot, route, severity, and response status.</p>
+    </div>
+    <button class="primary-button" type="button" data-management-test-alert><img src="~/icons/notification.svg" alt="" /> Test Alert</button>
+</section>
+
+<section class="grid-two">
+    <article class="panel">
+        <div class="panel-header"><div><h2>Live escalations</h2></div><span class="pill danger">High priority</span></div>
+        <div class="alert-feed" data-management-alerts></div>
+    </article>
+    <aside class="panel">
+        <div class="panel-header compact"><div><h2>Priority rules</h2></div></div>
+        <ul class="activity-log">
+            <li>Immediate Assistance stays visible until Admin confirms response.</li>
+            <li>High risks require supervisor review and action tracking.</li>
+            <li>Medium risks are grouped into route/depot trend monitoring.</li>
+            <li>Closed false alarms are excluded from urgent escalations.</li>
+        </ul>
+    </aside>
+</section>
+
+@section Scripts {
+    <script src="~/js/operator-data.js" asp-append-version="true"></script>
+    <script src="~/js/management-alerts.js" asp-append-version="true"></script>
+}

@@ -1,0 +1,45 @@
+using Microsoft.AspNetCore.Mvc;
+
+namespace SafeGuardApp.Controllers;
+
+public class OperatorController : Controller
+{
+    private void SetRoleContext(string activePage)
+    {
+        ViewData["Role"] = "Operator";
+        ViewData["ActivePage"] = activePage;
+        ViewData["OperatorName"] = "Sam Patel";
+        ViewData["Depot"] = "Eglinton Division";
+        ViewData["Shift"] = "Day Shift";
+    }
+
+    public IActionResult Dashboard()
+    {
+        SetRoleContext("Dashboard");
+        return View();
+    }
+
+    public IActionResult Reports()
+    {
+        SetRoleContext("Reports");
+        return View();
+    }
+
+    public IActionResult Alerts()
+    {
+        SetRoleContext("Alerts");
+        return View();
+    }
+
+    public IActionResult Action()
+    {
+        SetRoleContext("Action");
+        return View();
+    }
+
+    public IActionResult Settings()
+    {
+        SetRoleContext("Settings");
+        return View();
+    }
+}

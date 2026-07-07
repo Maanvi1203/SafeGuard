@@ -1,0 +1,38 @@
+@{
+    ViewData["Title"] = "Management Action - SafeGuard App";
+}
+
+<section class="page-heading">
+    <div>
+        <h1>Response Actions</h1>
+        <p>Assign priorities, monitor completion, and review response history.</p>
+    </div>
+</section>
+
+<section class="action-grid">
+    <article class="panel">
+        <div class="panel-header compact"><div><h2>Action queue</h2></div></div>
+        <div class="workflow-board" data-management-action-board></div>
+    </article>
+    <article class="panel">
+        <div class="panel-header compact"><div><h2>Response notes</h2></div></div>
+        <form class="incident-form" data-management-note-form>
+            <label>Linked Report ID
+                <input name="reportId" value="JR-1031" required />
+            </label>
+            <label>Priority
+                <select name="priority"><option>Immediate</option><option>High</option><option>Medium</option><option>Monitor</option></select>
+            </label>
+            <label>Management Note
+                <textarea name="note" rows="4" placeholder="Add a response note." required></textarea>
+            </label>
+            <button class="primary-button" type="submit">Add Note</button>
+        </form>
+        <ul class="activity-log" data-management-note-log></ul>
+    </article>
+</section>
+
+@section Scripts {
+    <script src="~/js/operator-data.js" asp-append-version="true"></script>
+    <script src="~/js/management-action.js" asp-append-version="true"></script>
+}

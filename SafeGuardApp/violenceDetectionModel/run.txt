@@ -1,0 +1,2 @@
+python -c "from ultralytics import YOLO; m=YOLO(r'violenceDetectionModel\Yolo_small_weights.pt'); m.predict(source=0, conf=0.5, classes=[1], show=True, save=False)"
+This is for the camera.

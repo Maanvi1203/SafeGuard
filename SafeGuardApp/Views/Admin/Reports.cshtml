@@ -1,0 +1,47 @@
+@{
+    ViewData["Title"] = "Admin Reports - SafeGuard App";
+}
+
+<section class="page-heading">
+    <div>
+        <h1>All Reports</h1>
+        <p>Audit reports, review operator decisions, and update status where required.</p>
+    </div>
+</section>
+
+<section class="filter-bar" aria-label="Admin report filters">
+    <label>Status
+        <select data-admin-status-filter>
+            <option value="All">All</option>
+            <option value="Pending">Pending</option>
+            <option value="Acknowledged">Acknowledged</option>
+            <option value="Escalated">Escalated</option>
+            <option value="Closed">Closed</option>
+        </select>
+    </label>
+    <label>Source
+        <select data-admin-source-filter>
+            <option value="All">All</option>
+            <option value="Rider">Rider</option>
+            <option value="Operator">Operator</option>
+        </select>
+    </label>
+    <label>Risk Type
+        <select data-admin-risk-filter><option value="All">All</option></select>
+    </label>
+</section>
+
+<section class="panel">
+    <div class="panel-header"><div><h2>Report audit</h2></div><span class="pill" data-admin-report-count>0 reports</span></div>
+    <div class="table-wrap">
+        <table class="data-table" aria-label="Admin report audit">
+            <thead><tr><th>Time</th><th>Status</th><th>Source</th><th>Route / Bus</th><th>Risk</th><th>Location</th><th>Media</th><th>Actions</th></tr></thead>
+            <tbody data-admin-report-list></tbody>
+        </table>
+    </div>
+</section>
+
+@section Scripts {
+    <script src="~/js/operator-data.js" asp-append-version="true"></script>
+    <script src="~/js/admin-reports.js" asp-append-version="true"></script>
+}

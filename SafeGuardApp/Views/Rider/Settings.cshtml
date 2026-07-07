@@ -1,0 +1,46 @@
+@{
+    ViewData["Title"] = "Rider Settings - SafeGuard App";
+}
+
+<section class="page-heading">
+    <div>
+        <h1>Settings</h1>
+        <p>Manage rider notifications, profile, and privacy preferences.</p>
+    </div>
+</section>
+
+<section class="settings-grid">
+    <article class="panel">
+        <div class="panel-header compact"><div><h2>Notifications</h2></div></div>
+        <label class="toggle-row"><span>Safety alert sound</span><input type="checkbox" data-rider-setting="sound" checked /></label>
+        <label class="toggle-row"><span>Browser toast alerts</span><input type="checkbox" data-rider-setting="toast" checked /></label>
+        <label class="toggle-row"><span>Report status updates</span><input type="checkbox" data-rider-setting="status" checked /></label>
+    </article>
+    <article class="panel">
+        <div class="panel-header compact"><div><h2>Rider profile</h2></div></div>
+        <dl>
+            <div><dt>Name</dt><dd>Rider User</dd></div>
+            <div><dt>Default route</dt><dd>54 Lawrence East</dd></div>
+            <div><dt>Language</dt><dd>English</dd></div>
+        </dl>
+    </article>
+</section>
+
+<section class="panel">
+    <div class="panel-header"><div><h2>Privacy</h2></div></div>
+    <p class="muted-note">Submitted reports may include route, bus ID, location, audio, images, or video. Access should remain role-based and limited to safety review.</p>
+</section>
+
+<section class="panel document-panel">
+    <div class="panel-header">
+        <div><h2>Rider safety guide</h2></div>
+        <a class="secondary-button" href="~/documents/rider-safety-precautions-guide.pdf" target="_blank" rel="noopener">Open PDF</a>
+    </div>
+    <iframe class="pdf-viewer" src="~/documents/rider-safety-precautions-guide.pdf" title="Rider Safety and Precautions Guide PDF"></iframe>
+</section>
+
+
+@section Scripts {
+    <script src="~/js/operator-data.js" asp-append-version="true"></script>
+    <script src="~/js/rider-settings.js" asp-append-version="true"></script>
+}

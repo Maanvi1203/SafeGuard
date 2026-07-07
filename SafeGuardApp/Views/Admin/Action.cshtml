@@ -1,0 +1,38 @@
+@{
+    ViewData["Title"] = "Admin Action - SafeGuard App";
+}
+
+<section class="page-heading">
+    <div>
+        <h1>Admin Action</h1>
+        <p>Configure response workflows, confirm escalations, and manage review outcomes.</p>
+    </div>
+</section>
+
+<section class="action-grid">
+    <article class="panel">
+        <div class="panel-header compact"><div><h2>Escalation workflow</h2></div></div>
+        <div class="workflow-board" data-admin-workflow-board></div>
+    </article>
+    <article class="panel">
+        <div class="panel-header compact"><div><h2>Admin decisions</h2></div></div>
+        <form class="incident-form" data-admin-decision-form>
+            <label>Report ID
+                <input name="reportId" value="JR-1031" required />
+            </label>
+            <label>Decision
+                <select name="decision"><option>Dispatch security</option><option>Notify management</option><option>Close as duplicate</option><option>Request operator follow-up</option></select>
+            </label>
+            <label>Notes
+                <textarea name="notes" rows="4" required></textarea>
+            </label>
+            <button class="primary-button" type="submit">Save Decision</button>
+        </form>
+        <ul class="activity-log" data-admin-decision-log></ul>
+    </article>
+</section>
+
+@section Scripts {
+    <script src="~/js/operator-data.js" asp-append-version="true"></script>
+    <script src="~/js/admin-action.js" asp-append-version="true"></script>
+}

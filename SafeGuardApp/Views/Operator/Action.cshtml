@@ -1,0 +1,97 @@
+@{
+    ViewData["Title"] = "Operator Action - SafeGuard App";
+}
+
+<section class="page-heading">
+    <div>
+        <h1>Action Review</h1>
+        <p>View linked media, analyze live clips, and flag confirmed risks.</p>
+    </div>
+</section>
+
+<section class="action-grid">
+    <article class="panel emergency-panel">
+        <div class="panel-header compact">
+            <div>
+                <h2>Operator quick actions</h2>
+            </div>
+        </div>
+        <div class="quick-action-grid">
+            <button class="action-tile" type="button" data-action-log="Notify Transit Control"><img src="~/icons/notification.svg" alt="" /><span>Notify Transit Control</span></button>
+            <button class="action-tile" type="button" data-action-log="Request Security"><img src="~/icons/security-user.svg" alt="" /><span>Request Security</span></button>
+            <button class="action-tile" type="button" data-action-log="Lock Doors"><img src="~/icons/lock.svg" alt="" /><span>Lock Doors</span></button>
+            <button class="action-tile" type="button" data-action-log="Onboard Announcement"><img src="~/icons/announcement.svg" alt="" /><span>Onboard Announcement</span></button>
+            <button class="action-tile danger" type="button" data-action-log="Call Emergency Support"><img src="~/icons/emergency.svg" alt="" /><span>Call Emergency Support</span></button>
+            <button class="action-tile danger" type="button" data-action-log="Silent Alarm"><img src="~/icons/safety.svg" alt="" /><span>Silent Alarm</span></button>
+        </div>
+    </article>
+
+    <article class="panel video-analysis-panel">
+        <div class="panel-header compact">
+            <div>
+                <h2>Video Analysis</h2>
+            </div>
+            <span class="pill" data-video-analysis-status>Ready</span>
+        </div>
+        <div class="video-analyzer">
+            <div class="video-frame" data-video-frame>
+                <img src="~/images/ttc-electric-bus.jpg" alt="Video analysis preview" data-video-poster />
+                <video data-live-video autoplay muted playsinline hidden></video>
+                <canvas data-detection-overlay aria-hidden="true"></canvas>
+            </div>
+            <div class="analysis-controls">
+                <label>Source
+                    <select data-video-source>
+                        <option value="front-camera">Front camera</option>
+                        <option value="back-camera">Back camera</option>
+                        <option value="rear-door-camera">Rear door camera</option>
+                        <option value="uploaded-rider-clip">Uploaded rider clip</option>
+                    </select>
+                </label>
+                <label>Threshold
+                    <input type="number" data-video-threshold value="30" min="1" max="99" />
+                </label>
+                <button class="primary-button" type="button" data-toggle-video-analysis>Start Analysis</button>
+            </div>
+            <div class="analysis-result" data-video-analysis-result>
+                Waiting for video source.
+            </div>
+        </div>
+    </article>
+</section>
+
+<section class="action-grid secondary-action-grid">
+    <article class="panel">
+        <div class="panel-header compact">
+            <div>
+                <h2>Linked clips</h2>
+            </div>
+        </div>
+        <div class="video-clip-list" data-video-clips></div>
+    </article>
+
+    <article class="panel">
+        <div class="panel-header compact">
+            <div>
+                <h2>Analysis events</h2>
+            </div>
+        </div>
+        <ul class="activity-log" data-video-analysis-history></ul>
+    </article>
+</section>
+
+<section class="panel">
+    <div class="panel-header compact">
+        <div>
+            <h2>Action log</h2>
+        </div>
+    </div>
+    <ul class="activity-log" data-action-history></ul>
+</section>
+
+@section Scripts {
+    <script src="~/js/operator-data.js" asp-append-version="true"></script>
+    <script src="https://cdn.jsdelivr.net/npm/onnxruntime-web@1.27.0/dist/ort.min.js" crossorigin="anonymous"></script>
+    <script src="~/js/operator-video-analysis.js" asp-append-version="true"></script>
+    <script src="~/js/operator-action.js" asp-append-version="true"></script>
+}

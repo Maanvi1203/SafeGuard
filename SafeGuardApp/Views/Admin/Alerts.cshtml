@@ -1,0 +1,27 @@
+@{
+    ViewData["Title"] = "Admin Alerts - SafeGuard App";
+}
+
+<section class="page-heading">
+    <div>
+        <h1>Admin Alerts</h1>
+        <p>Receive escalated operator reports and real-time video risk events.</p>
+    </div>
+    <button class="primary-button" type="button" data-admin-test-alert><img src="~/icons/notification.svg" alt="" /> Test Admin Alert</button>
+</section>
+
+<section class="grid-two">
+    <article class="panel">
+        <div class="panel-header"><div><h2>Escalated reports</h2></div><span class="pill danger">Requires action</span></div>
+        <div class="alert-feed" data-admin-alert-feed></div>
+    </article>
+    <article class="panel">
+        <div class="panel-header"><div><h2>Video risk events</h2></div><span class="pill">YOLOv8 scaffold</span></div>
+        <ul class="activity-log" data-admin-video-events></ul>
+    </article>
+</section>
+
+@section Scripts {
+    <script src="~/js/operator-data.js" asp-append-version="true"></script>
+    <script src="~/js/admin-alerts.js" asp-append-version="true"></script>
+}

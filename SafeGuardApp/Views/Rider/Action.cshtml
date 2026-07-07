@@ -1,0 +1,32 @@
+@{
+    ViewData["Title"] = "Rider Action - SafeGuard App";
+}
+
+<section class="page-heading">
+    <div>
+        <h1>Request Help</h1>
+        <p>Fast actions for submitting a report, asking for assistance, and checking safety instructions.</p>
+    </div>
+</section>
+
+<section class="action-grid">
+    <article class="panel">
+        <div class="panel-header compact"><div><h2>Rider actions</h2></div></div>
+        <div class="quick-action-grid">
+            <a class="action-tile danger" asp-controller="Rider" asp-action="Reports" asp-fragment="new-report"><img src="~/icons/emergency.svg" alt="" /><span>Report Emergency</span></a>
+            <button class="action-tile" type="button" data-rider-action="Request operator assistance"><img src="~/icons/security-user.svg" alt="" /><span>Request Assistance</span></button>
+            <button class="action-tile" type="button" data-rider-action="Share current location"><img src="~/icons/map-pin.svg" alt="" /><span>Share Location</span></button>
+            <button class="action-tile" type="button" data-rider-action="Follow onboard announcement"><img src="~/icons/announcement.svg" alt="" /><span>Follow Announcement</span></button>
+        </div>
+    </article>
+
+    <article class="panel">
+        <div class="panel-header compact"><div><h2>Help request log</h2></div></div>
+        <ul class="activity-log" data-rider-action-log></ul>
+    </article>
+</section>
+
+@section Scripts {
+    <script src="~/js/operator-data.js" asp-append-version="true"></script>
+    <script src="~/js/rider-action.js" asp-append-version="true"></script>
+}

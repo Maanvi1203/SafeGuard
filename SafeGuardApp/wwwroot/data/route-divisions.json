@@ -1,0 +1,1315 @@
+{
+  "source": "TTC_Bus_Routes_by_Operating_Division_Report.docx",
+  "divisionSummary": [
+    {
+      "divisionCode": "ARW",
+      "divisionName": "Arrow Road Division",
+      "numberOfRoutes": "19",
+      "notes": "Routes 336 and 339 are shared with McNicoll Division."
+    },
+    {
+      "divisionCode": "BIR",
+      "divisionName": "Birchmount Division",
+      "numberOfRoutes": "34",
+      "notes": "-"
+    },
+    {
+      "divisionCode": "EGL",
+      "divisionName": "Eglinton Division",
+      "numberOfRoutes": "25",
+      "notes": "Route 54 Lawrence East, including 54B Lawrence East towards Morningside, falls under Eglinton Division. Route 503 is shared with Queensway Division."
+    },
+    {
+      "divisionCode": "MAL",
+      "divisionName": "Malvern Division",
+      "numberOfRoutes": "24",
+      "notes": "-"
+    },
+    {
+      "divisionCode": "MCN",
+      "divisionName": "McNicoll Division",
+      "numberOfRoutes": "19",
+      "notes": "Routes 336 and 339 are shared with Arrow Road Division."
+    },
+    {
+      "divisionCode": "MTD",
+      "divisionName": "Mount Dennis Division",
+      "numberOfRoutes": "25",
+      "notes": "-"
+    },
+    {
+      "divisionCode": "QSY",
+      "divisionName": "Queensway Division",
+      "numberOfRoutes": "29",
+      "notes": "Route 503 is shared with Eglinton Division."
+    },
+    {
+      "divisionCode": "WIL",
+      "divisionName": "Wilson Division",
+      "numberOfRoutes": "32",
+      "notes": "-"
+    },
+    {
+      "divisionCode": "SHARED",
+      "divisionName": "Shared / All Divisions",
+      "numberOfRoutes": "2",
+      "notes": "Route 300 is listed as ALL. Route 320 is listed as ALL BUT QSY."
+    }
+  ],
+  "routes": [
+    {
+      "routeNo": "36",
+      "routeName": "Finch West",
+      "divisionCode": "ARW",
+      "divisionName": "Arrow Road Division"
+    },
+    {
+      "routeNo": "52",
+      "routeName": "Lawrence West",
+      "divisionCode": "ARW",
+      "divisionName": "Arrow Road Division"
+    },
+    {
+      "routeNo": "84",
+      "routeName": "Sheppard West",
+      "divisionCode": "ARW",
+      "divisionName": "Arrow Road Division"
+    },
+    {
+      "routeNo": "96",
+      "routeName": "Wilson",
+      "divisionCode": "ARW",
+      "divisionName": "Arrow Road Division"
+    },
+    {
+      "routeNo": "99",
+      "routeName": "Arrow Road",
+      "divisionCode": "ARW",
+      "divisionName": "Arrow Road Division"
+    },
+    {
+      "routeNo": "108",
+      "routeName": "Driftwood",
+      "divisionCode": "ARW",
+      "divisionName": "Arrow Road Division"
+    },
+    {
+      "routeNo": "119",
+      "routeName": "Torbarrie",
+      "divisionCode": "ARW",
+      "divisionName": "Arrow Road Division"
+    },
+    {
+      "routeNo": "120",
+      "routeName": "Calvington",
+      "divisionCode": "ARW",
+      "divisionName": "Arrow Road Division"
+    },
+    {
+      "routeNo": "165",
+      "routeName": "Weston Road North",
+      "divisionCode": "ARW",
+      "divisionName": "Arrow Road Division"
+    },
+    {
+      "routeNo": "336",
+      "routeName": "Finch West",
+      "divisionCode": "ARW",
+      "divisionName": "Arrow Road Division"
+    },
+    {
+      "routeNo": "339",
+      "routeName": "Finch East",
+      "divisionCode": "ARW",
+      "divisionName": "Arrow Road Division"
+    },
+    {
+      "routeNo": "352",
+      "routeName": "Lawrence West",
+      "divisionCode": "ARW",
+      "divisionName": "Arrow Road Division"
+    },
+    {
+      "routeNo": "384",
+      "routeName": "Sheppard West",
+      "divisionCode": "ARW",
+      "divisionName": "Arrow Road Division"
+    },
+    {
+      "routeNo": "396",
+      "routeName": "Wilson",
+      "divisionCode": "ARW",
+      "divisionName": "Arrow Road Division"
+    },
+    {
+      "routeNo": "906",
+      "routeName": "Airport-Humber College Express",
+      "divisionCode": "ARW",
+      "divisionName": "Arrow Road Division"
+    },
+    {
+      "routeNo": "927",
+      "routeName": "Highway 27 Express",
+      "divisionCode": "ARW",
+      "divisionName": "Arrow Road Division"
+    },
+    {
+      "routeNo": "952",
+      "routeName": "Lawrence West Express",
+      "divisionCode": "ARW",
+      "divisionName": "Arrow Road Division"
+    },
+    {
+      "routeNo": "984",
+      "routeName": "Sheppard West Express",
+      "divisionCode": "ARW",
+      "divisionName": "Arrow Road Division"
+    },
+    {
+      "routeNo": "996",
+      "routeName": "Wilson Express",
+      "divisionCode": "ARW",
+      "divisionName": "Arrow Road Division"
+    },
+    {
+      "routeNo": "8",
+      "routeName": "Broadview",
+      "divisionCode": "BIR",
+      "divisionName": "Birchmount Division"
+    },
+    {
+      "routeNo": "9",
+      "routeName": "Bellamy",
+      "divisionCode": "BIR",
+      "divisionName": "Birchmount Division"
+    },
+    {
+      "routeNo": "12",
+      "routeName": "Kingston Road",
+      "divisionCode": "BIR",
+      "divisionName": "Birchmount Division"
+    },
+    {
+      "routeNo": "16",
+      "routeName": "McCowan",
+      "divisionCode": "BIR",
+      "divisionName": "Birchmount Division"
+    },
+    {
+      "routeNo": "19",
+      "routeName": "Bay",
+      "divisionCode": "BIR",
+      "divisionName": "Birchmount Division"
+    },
+    {
+      "routeNo": "20",
+      "routeName": "Cliffside",
+      "divisionCode": "BIR",
+      "divisionName": "Birchmount Division"
+    },
+    {
+      "routeNo": "21",
+      "routeName": "Brimley",
+      "divisionCode": "BIR",
+      "divisionName": "Birchmount Division"
+    },
+    {
+      "routeNo": "22",
+      "routeName": "Coxwell",
+      "divisionCode": "BIR",
+      "divisionName": "Birchmount Division"
+    },
+    {
+      "routeNo": "23",
+      "routeName": "Dawes",
+      "divisionCode": "BIR",
+      "divisionName": "Birchmount Division"
+    },
+    {
+      "routeNo": "24",
+      "routeName": "Victoria Park",
+      "divisionCode": "BIR",
+      "divisionName": "Birchmount Division"
+    },
+    {
+      "routeNo": "31",
+      "routeName": "Greenwood",
+      "divisionCode": "BIR",
+      "divisionName": "Birchmount Division"
+    },
+    {
+      "routeNo": "62",
+      "routeName": "Mortimer",
+      "divisionCode": "BIR",
+      "divisionName": "Birchmount Division"
+    },
+    {
+      "routeNo": "64",
+      "routeName": "Main",
+      "divisionCode": "BIR",
+      "divisionName": "Birchmount Division"
+    },
+    {
+      "routeNo": "65",
+      "routeName": "Parliament",
+      "divisionCode": "BIR",
+      "divisionName": "Birchmount Division"
+    },
+    {
+      "routeNo": "69",
+      "routeName": "Warden South",
+      "divisionCode": "BIR",
+      "divisionName": "Birchmount Division"
+    },
+    {
+      "routeNo": "70",
+      "routeName": "O\u2019Connor",
+      "divisionCode": "BIR",
+      "divisionName": "Birchmount Division"
+    },
+    {
+      "routeNo": "72",
+      "routeName": "Pape",
+      "divisionCode": "BIR",
+      "divisionName": "Birchmount Division"
+    },
+    {
+      "routeNo": "75",
+      "routeName": "Sherbourne",
+      "divisionCode": "BIR",
+      "divisionName": "Birchmount Division"
+    },
+    {
+      "routeNo": "82",
+      "routeName": "Rosedale",
+      "divisionCode": "BIR",
+      "divisionName": "Birchmount Division"
+    },
+    {
+      "routeNo": "83",
+      "routeName": "Jones",
+      "divisionCode": "BIR",
+      "divisionName": "Birchmount Division"
+    },
+    {
+      "routeNo": "87",
+      "routeName": "Cosburn",
+      "divisionCode": "BIR",
+      "divisionName": "Birchmount Division"
+    },
+    {
+      "routeNo": "92",
+      "routeName": "Woodbine South",
+      "divisionCode": "BIR",
+      "divisionName": "Birchmount Division"
+    },
+    {
+      "routeNo": "93",
+      "routeName": "Parkview Hills",
+      "divisionCode": "BIR",
+      "divisionName": "Birchmount Division"
+    },
+    {
+      "routeNo": "94",
+      "routeName": "Wellesley",
+      "divisionCode": "BIR",
+      "divisionName": "Birchmount Division"
+    },
+    {
+      "routeNo": "113",
+      "routeName": "Danforth",
+      "divisionCode": "BIR",
+      "divisionName": "Birchmount Division"
+    },
+    {
+      "routeNo": "114",
+      "routeName": "Queens Quay East",
+      "divisionCode": "BIR",
+      "divisionName": "Birchmount Division"
+    },
+    {
+      "routeNo": "117",
+      "routeName": "Birchmount South",
+      "divisionCode": "BIR",
+      "divisionName": "Birchmount Division"
+    },
+    {
+      "routeNo": "121",
+      "routeName": "Esplanade-River",
+      "divisionCode": "BIR",
+      "divisionName": "Birchmount Division"
+    },
+    {
+      "routeNo": "135",
+      "routeName": "Gerrard",
+      "divisionCode": "BIR",
+      "divisionName": "Birchmount Division"
+    },
+    {
+      "routeNo": "316",
+      "routeName": "Kingston Road-McCowan",
+      "divisionCode": "BIR",
+      "divisionName": "Birchmount Division"
+    },
+    {
+      "routeNo": "322",
+      "routeName": "Coxwell",
+      "divisionCode": "BIR",
+      "divisionName": "Birchmount Division"
+    },
+    {
+      "routeNo": "324",
+      "routeName": "Victoria Park",
+      "divisionCode": "BIR",
+      "divisionName": "Birchmount Division"
+    },
+    {
+      "routeNo": "365",
+      "routeName": "Parliament",
+      "divisionCode": "BIR",
+      "divisionName": "Birchmount Division"
+    },
+    {
+      "routeNo": "924",
+      "routeName": "Victoria Park Express",
+      "divisionCode": "BIR",
+      "divisionName": "Birchmount Division"
+    },
+    {
+      "routeNo": "11",
+      "routeName": "Bayview",
+      "divisionCode": "EGL",
+      "divisionName": "Eglinton Division"
+    },
+    {
+      "routeNo": "25",
+      "routeName": "Don Mills",
+      "divisionCode": "EGL",
+      "divisionName": "Eglinton Division"
+    },
+    {
+      "routeNo": "34",
+      "routeName": "Eglinton",
+      "divisionCode": "EGL",
+      "divisionName": "Eglinton Division"
+    },
+    {
+      "routeNo": "51",
+      "routeName": "Leslie",
+      "divisionCode": "EGL",
+      "divisionName": "Eglinton Division"
+    },
+    {
+      "routeNo": "54",
+      "routeName": "Lawrence East",
+      "divisionCode": "EGL",
+      "divisionName": "Eglinton Division"
+    },
+    {
+      "routeNo": "67",
+      "routeName": "Pharmacy",
+      "divisionCode": "EGL",
+      "divisionName": "Eglinton Division"
+    },
+    {
+      "routeNo": "74",
+      "routeName": "Mount Pleasant",
+      "divisionCode": "EGL",
+      "divisionName": "Eglinton Division"
+    },
+    {
+      "routeNo": "88",
+      "routeName": "South Leaside",
+      "divisionCode": "EGL",
+      "divisionName": "Eglinton Division"
+    },
+    {
+      "routeNo": "91",
+      "routeName": "Woodbine",
+      "divisionCode": "EGL",
+      "divisionName": "Eglinton Division"
+    },
+    {
+      "routeNo": "100",
+      "routeName": "Flemingdon Park",
+      "divisionCode": "EGL",
+      "divisionName": "Eglinton Division"
+    },
+    {
+      "routeNo": "103",
+      "routeName": "Mount Pleasant North",
+      "divisionCode": "EGL",
+      "divisionName": "Eglinton Division"
+    },
+    {
+      "routeNo": "154",
+      "routeName": "Curran Hall",
+      "divisionCode": "EGL",
+      "divisionName": "Eglinton Division"
+    },
+    {
+      "routeNo": "156",
+      "routeName": "Millwood",
+      "divisionCode": "EGL",
+      "divisionName": "Eglinton Division"
+    },
+    {
+      "routeNo": "162",
+      "routeName": "Lawrence-Donway",
+      "divisionCode": "EGL",
+      "divisionName": "Eglinton Division"
+    },
+    {
+      "routeNo": "191",
+      "routeName": "Underhill",
+      "divisionCode": "EGL",
+      "divisionName": "Eglinton Division"
+    },
+    {
+      "routeNo": "201",
+      "routeName": "Bluffer\u2019s Park",
+      "divisionCode": "EGL",
+      "divisionName": "Eglinton Division"
+    },
+    {
+      "routeNo": "202",
+      "routeName": "Cherry Beach",
+      "divisionCode": "EGL",
+      "divisionName": "Eglinton Division"
+    },
+    {
+      "routeNo": "301",
+      "routeName": "Queen",
+      "divisionCode": "EGL",
+      "divisionName": "Eglinton Division"
+    },
+    {
+      "routeNo": "325",
+      "routeName": "Don Mills",
+      "divisionCode": "EGL",
+      "divisionName": "Eglinton Division"
+    },
+    {
+      "routeNo": "334",
+      "routeName": "Eglinton",
+      "divisionCode": "EGL",
+      "divisionName": "Eglinton Division"
+    },
+    {
+      "routeNo": "354",
+      "routeName": "Lawrence East",
+      "divisionCode": "EGL",
+      "divisionName": "Eglinton Division"
+    },
+    {
+      "routeNo": "503",
+      "routeName": "Kingston Road",
+      "divisionCode": "EGL",
+      "divisionName": "Eglinton Division"
+    },
+    {
+      "routeNo": "504",
+      "routeName": "King",
+      "divisionCode": "EGL",
+      "divisionName": "Eglinton Division"
+    },
+    {
+      "routeNo": "925",
+      "routeName": "Don Mills Express",
+      "divisionCode": "EGL",
+      "divisionName": "Eglinton Division"
+    },
+    {
+      "routeNo": "954",
+      "routeName": "Lawrence East Express",
+      "divisionCode": "EGL",
+      "divisionName": "Eglinton Division"
+    },
+    {
+      "routeNo": "38",
+      "routeName": "Highland Creek",
+      "divisionCode": "MAL",
+      "divisionName": "Malvern Division"
+    },
+    {
+      "routeNo": "85",
+      "routeName": "Sheppard East",
+      "divisionCode": "MAL",
+      "divisionName": "Malvern Division"
+    },
+    {
+      "routeNo": "86",
+      "routeName": "Scarborough",
+      "divisionCode": "MAL",
+      "divisionName": "Malvern Division"
+    },
+    {
+      "routeNo": "95",
+      "routeName": "York Mills",
+      "divisionCode": "MAL",
+      "divisionName": "Malvern Division"
+    },
+    {
+      "routeNo": "102",
+      "routeName": "Markham Road",
+      "divisionCode": "MAL",
+      "divisionName": "Malvern Division"
+    },
+    {
+      "routeNo": "116",
+      "routeName": "Morningside",
+      "divisionCode": "MAL",
+      "divisionName": "Malvern Division"
+    },
+    {
+      "routeNo": "122",
+      "routeName": "Graydon Hall",
+      "divisionCode": "MAL",
+      "divisionName": "Malvern Division"
+    },
+    {
+      "routeNo": "130",
+      "routeName": "Middlefield",
+      "divisionCode": "MAL",
+      "divisionName": "Malvern Division"
+    },
+    {
+      "routeNo": "131",
+      "routeName": "Nugget",
+      "divisionCode": "MAL",
+      "divisionName": "Malvern Division"
+    },
+    {
+      "routeNo": "132",
+      "routeName": "Milner",
+      "divisionCode": "MAL",
+      "divisionName": "Malvern Division"
+    },
+    {
+      "routeNo": "133",
+      "routeName": "Neilson",
+      "divisionCode": "MAL",
+      "divisionName": "Malvern Division"
+    },
+    {
+      "routeNo": "134",
+      "routeName": "Progress",
+      "divisionCode": "MAL",
+      "divisionName": "Malvern Division"
+    },
+    {
+      "routeNo": "169",
+      "routeName": "Huntingwood",
+      "divisionCode": "MAL",
+      "divisionName": "Malvern Division"
+    },
+    {
+      "routeNo": "185",
+      "routeName": "Sheppard Central",
+      "divisionCode": "MAL",
+      "divisionName": "Malvern Division"
+    },
+    {
+      "routeNo": "200",
+      "routeName": "Toronto Zoo",
+      "divisionCode": "MAL",
+      "divisionName": "Malvern Division"
+    },
+    {
+      "routeNo": "385",
+      "routeName": "Sheppard East",
+      "divisionCode": "MAL",
+      "divisionName": "Malvern Division"
+    },
+    {
+      "routeNo": "395",
+      "routeName": "York Mills",
+      "divisionCode": "MAL",
+      "divisionName": "Malvern Division"
+    },
+    {
+      "routeNo": "902",
+      "routeName": "Markham Road Express",
+      "divisionCode": "MAL",
+      "divisionName": "Malvern Division"
+    },
+    {
+      "routeNo": "904",
+      "routeName": "Sheppard-Kennedy Express",
+      "divisionCode": "MAL",
+      "divisionName": "Malvern Division"
+    },
+    {
+      "routeNo": "905",
+      "routeName": "Eglinton East Express",
+      "divisionCode": "MAL",
+      "divisionName": "Malvern Division"
+    },
+    {
+      "routeNo": "938",
+      "routeName": "Highland Creek Express",
+      "divisionCode": "MAL",
+      "divisionName": "Malvern Division"
+    },
+    {
+      "routeNo": "985",
+      "routeName": "Sheppard East Express",
+      "divisionCode": "MAL",
+      "divisionName": "Malvern Division"
+    },
+    {
+      "routeNo": "986",
+      "routeName": "Scarborough Express",
+      "divisionCode": "MAL",
+      "divisionName": "Malvern Division"
+    },
+    {
+      "routeNo": "995",
+      "routeName": "York Mills Express",
+      "divisionCode": "MAL",
+      "divisionName": "Malvern Division"
+    },
+    {
+      "routeNo": "10",
+      "routeName": "Van Horne",
+      "divisionCode": "MCN",
+      "divisionName": "McNicoll Division"
+    },
+    {
+      "routeNo": "17",
+      "routeName": "Birchmount",
+      "divisionCode": "MCN",
+      "divisionName": "McNicoll Division"
+    },
+    {
+      "routeNo": "39",
+      "routeName": "Finch East",
+      "divisionCode": "MCN",
+      "divisionName": "McNicoll Division"
+    },
+    {
+      "routeNo": "42",
+      "routeName": "Cummer",
+      "divisionCode": "MCN",
+      "divisionName": "McNicoll Division"
+    },
+    {
+      "routeNo": "43",
+      "routeName": "Kennedy",
+      "divisionCode": "MCN",
+      "divisionName": "McNicoll Division"
+    },
+    {
+      "routeNo": "53",
+      "routeName": "Steeles East",
+      "divisionCode": "MCN",
+      "divisionName": "McNicoll Division"
+    },
+    {
+      "routeNo": "57",
+      "routeName": "Midland",
+      "divisionCode": "MCN",
+      "divisionName": "McNicoll Division"
+    },
+    {
+      "routeNo": "68",
+      "routeName": "Warden",
+      "divisionCode": "MCN",
+      "divisionName": "McNicoll Division"
+    },
+    {
+      "routeNo": "129",
+      "routeName": "McCowan North",
+      "divisionCode": "MCN",
+      "divisionName": "McNicoll Division"
+    },
+    {
+      "routeNo": "151",
+      "routeName": "Leslie North",
+      "divisionCode": "MCN",
+      "divisionName": "McNicoll Division"
+    },
+    {
+      "routeNo": "167",
+      "routeName": "Pharmacy North",
+      "divisionCode": "MCN",
+      "divisionName": "McNicoll Division"
+    },
+    {
+      "routeNo": "336",
+      "routeName": "Finch West",
+      "divisionCode": "MCN",
+      "divisionName": "McNicoll Division"
+    },
+    {
+      "routeNo": "339",
+      "routeName": "Finch East",
+      "divisionCode": "MCN",
+      "divisionName": "McNicoll Division"
+    },
+    {
+      "routeNo": "343",
+      "routeName": "Kennedy",
+      "divisionCode": "MCN",
+      "divisionName": "McNicoll Division"
+    },
+    {
+      "routeNo": "353",
+      "routeName": "Steeles",
+      "divisionCode": "MCN",
+      "divisionName": "McNicoll Division"
+    },
+    {
+      "routeNo": "903",
+      "routeName": "Kennedy Station-Scarborough Express",
+      "divisionCode": "MCN",
+      "divisionName": "McNicoll Division"
+    },
+    {
+      "routeNo": "939",
+      "routeName": "Finch Express",
+      "divisionCode": "MCN",
+      "divisionName": "McNicoll Division"
+    },
+    {
+      "routeNo": "953",
+      "routeName": "Steeles East Express",
+      "divisionCode": "MCN",
+      "divisionName": "McNicoll Division"
+    },
+    {
+      "routeNo": "968",
+      "routeName": "Warden Express",
+      "divisionCode": "MCN",
+      "divisionName": "McNicoll Division"
+    },
+    {
+      "routeNo": "14",
+      "routeName": "Glencairn",
+      "divisionCode": "MTD",
+      "divisionName": "Mount Dennis Division"
+    },
+    {
+      "routeNo": "27",
+      "routeName": "Jane South",
+      "divisionCode": "MTD",
+      "divisionName": "Mount Dennis Division"
+    },
+    {
+      "routeNo": "28",
+      "routeName": "Bayview South",
+      "divisionCode": "MTD",
+      "divisionName": "Mount Dennis Division"
+    },
+    {
+      "routeNo": "29",
+      "routeName": "Dufferin",
+      "divisionCode": "MTD",
+      "divisionName": "Mount Dennis Division"
+    },
+    {
+      "routeNo": "32",
+      "routeName": "Eglinton West",
+      "divisionCode": "MTD",
+      "divisionName": "Mount Dennis Division"
+    },
+    {
+      "routeNo": "35",
+      "routeName": "Jane",
+      "divisionCode": "MTD",
+      "divisionName": "Mount Dennis Division"
+    },
+    {
+      "routeNo": "41",
+      "routeName": "Keele",
+      "divisionCode": "MTD",
+      "divisionName": "Mount Dennis Division"
+    },
+    {
+      "routeNo": "45",
+      "routeName": "Kipling",
+      "divisionCode": "MTD",
+      "divisionName": "Mount Dennis Division"
+    },
+    {
+      "routeNo": "71",
+      "routeName": "Runnymede",
+      "divisionCode": "MTD",
+      "divisionName": "Mount Dennis Division"
+    },
+    {
+      "routeNo": "77",
+      "routeName": "Swansea",
+      "divisionCode": "MTD",
+      "divisionName": "Mount Dennis Division"
+    },
+    {
+      "routeNo": "79",
+      "routeName": "Scarlett Road",
+      "divisionCode": "MTD",
+      "divisionName": "Mount Dennis Division"
+    },
+    {
+      "routeNo": "112",
+      "routeName": "West Mall",
+      "divisionCode": "MTD",
+      "divisionName": "Mount Dennis Division"
+    },
+    {
+      "routeNo": "158",
+      "routeName": "Trethewey",
+      "divisionCode": "MTD",
+      "divisionName": "Mount Dennis Division"
+    },
+    {
+      "routeNo": "161",
+      "routeName": "Rogers Road",
+      "divisionCode": "MTD",
+      "divisionName": "Mount Dennis Division"
+    },
+    {
+      "routeNo": "164",
+      "routeName": "Castlefield",
+      "divisionCode": "MTD",
+      "divisionName": "Mount Dennis Division"
+    },
+    {
+      "routeNo": "168",
+      "routeName": "Symington",
+      "divisionCode": "MTD",
+      "divisionName": "Mount Dennis Division"
+    },
+    {
+      "routeNo": "171",
+      "routeName": "Mount Dennis",
+      "divisionCode": "MTD",
+      "divisionName": "Mount Dennis Division"
+    },
+    {
+      "routeNo": "329",
+      "routeName": "Dufferin",
+      "divisionCode": "MTD",
+      "divisionName": "Mount Dennis Division"
+    },
+    {
+      "routeNo": "335",
+      "routeName": "Jane",
+      "divisionCode": "MTD",
+      "divisionName": "Mount Dennis Division"
+    },
+    {
+      "routeNo": "341",
+      "routeName": "Keele",
+      "divisionCode": "MTD",
+      "divisionName": "Mount Dennis Division"
+    },
+    {
+      "routeNo": "506",
+      "routeName": "Carlton",
+      "divisionCode": "MTD",
+      "divisionName": "Mount Dennis Division"
+    },
+    {
+      "routeNo": "929",
+      "routeName": "Dufferin Express",
+      "divisionCode": "MTD",
+      "divisionName": "Mount Dennis Division"
+    },
+    {
+      "routeNo": "935",
+      "routeName": "Jane Express",
+      "divisionCode": "MTD",
+      "divisionName": "Mount Dennis Division"
+    },
+    {
+      "routeNo": "941",
+      "routeName": "Keele Express",
+      "divisionCode": "MTD",
+      "divisionName": "Mount Dennis Division"
+    },
+    {
+      "routeNo": "945",
+      "routeName": "Kipling Express",
+      "divisionCode": "MTD",
+      "divisionName": "Mount Dennis Division"
+    },
+    {
+      "routeNo": "15",
+      "routeName": "Evans",
+      "divisionCode": "QSY",
+      "divisionName": "Queensway Division"
+    },
+    {
+      "routeNo": "26",
+      "routeName": "Dupont",
+      "divisionCode": "QSY",
+      "divisionName": "Queensway Division"
+    },
+    {
+      "routeNo": "30",
+      "routeName": "High Park North",
+      "divisionCode": "QSY",
+      "divisionName": "Queensway Division"
+    },
+    {
+      "routeNo": "37",
+      "routeName": "Islington",
+      "divisionCode": "QSY",
+      "divisionName": "Queensway Division"
+    },
+    {
+      "routeNo": "40",
+      "routeName": "Junction-Dundas West",
+      "divisionCode": "QSY",
+      "divisionName": "Queensway Division"
+    },
+    {
+      "routeNo": "44",
+      "routeName": "Kipling South",
+      "divisionCode": "QSY",
+      "divisionName": "Queensway Division"
+    },
+    {
+      "routeNo": "46",
+      "routeName": "Martin Grove",
+      "divisionCode": "QSY",
+      "divisionName": "Queensway Division"
+    },
+    {
+      "routeNo": "48",
+      "routeName": "Rathburn",
+      "divisionCode": "QSY",
+      "divisionName": "Queensway Division"
+    },
+    {
+      "routeNo": "49",
+      "routeName": "Bloor West",
+      "divisionCode": "QSY",
+      "divisionName": "Queensway Division"
+    },
+    {
+      "routeNo": "50",
+      "routeName": "Burnhamthorpe",
+      "divisionCode": "QSY",
+      "divisionName": "Queensway Division"
+    },
+    {
+      "routeNo": "55",
+      "routeName": "Warren Park",
+      "divisionCode": "QSY",
+      "divisionName": "Queensway Division"
+    },
+    {
+      "routeNo": "66",
+      "routeName": "Prince Edward",
+      "divisionCode": "QSY",
+      "divisionName": "Queensway Division"
+    },
+    {
+      "routeNo": "73",
+      "routeName": "Royal York",
+      "divisionCode": "QSY",
+      "divisionName": "Queensway Division"
+    },
+    {
+      "routeNo": "76",
+      "routeName": "Royal York South",
+      "divisionCode": "QSY",
+      "divisionName": "Queensway Division"
+    },
+    {
+      "routeNo": "80",
+      "routeName": "Queensway",
+      "divisionCode": "QSY",
+      "divisionName": "Queensway Division"
+    },
+    {
+      "routeNo": "110",
+      "routeName": "Islington South",
+      "divisionCode": "QSY",
+      "divisionName": "Queensway Division"
+    },
+    {
+      "routeNo": "111",
+      "routeName": "East Mall",
+      "divisionCode": "QSY",
+      "divisionName": "Queensway Division"
+    },
+    {
+      "routeNo": "123",
+      "routeName": "Sherway",
+      "divisionCode": "QSY",
+      "divisionName": "Queensway Division"
+    },
+    {
+      "routeNo": "127",
+      "routeName": "Davenport",
+      "divisionCode": "QSY",
+      "divisionName": "Queensway Division"
+    },
+    {
+      "routeNo": "149",
+      "routeName": "Etobicoke-Bloor",
+      "divisionCode": "QSY",
+      "divisionName": "Queensway Division"
+    },
+    {
+      "routeNo": "189",
+      "routeName": "Stockyards",
+      "divisionCode": "QSY",
+      "divisionName": "Queensway Division"
+    },
+    {
+      "routeNo": "203",
+      "routeName": "High Park",
+      "divisionCode": "QSY",
+      "divisionName": "Queensway Division"
+    },
+    {
+      "routeNo": "315",
+      "routeName": "Evans-Brown\u2019s Line",
+      "divisionCode": "QSY",
+      "divisionName": "Queensway Division"
+    },
+    {
+      "routeNo": "337",
+      "routeName": "Islington",
+      "divisionCode": "QSY",
+      "divisionName": "Queensway Division"
+    },
+    {
+      "routeNo": "340",
+      "routeName": "Junction",
+      "divisionCode": "QSY",
+      "divisionName": "Queensway Division"
+    },
+    {
+      "routeNo": "503",
+      "routeName": "Kingston Road",
+      "divisionCode": "QSY",
+      "divisionName": "Queensway Division"
+    },
+    {
+      "routeNo": "900",
+      "routeName": "Airport Express",
+      "divisionCode": "QSY",
+      "divisionName": "Queensway Division"
+    },
+    {
+      "routeNo": "937",
+      "routeName": "Islington Express",
+      "divisionCode": "QSY",
+      "divisionName": "Queensway Division"
+    },
+    {
+      "routeNo": "944",
+      "routeName": "Kipling South Express",
+      "divisionCode": "QSY",
+      "divisionName": "Queensway Division"
+    },
+    {
+      "routeNo": "7",
+      "routeName": "Bathurst",
+      "divisionCode": "WIL",
+      "divisionName": "Wilson Division"
+    },
+    {
+      "routeNo": "13",
+      "routeName": "Avenue Road",
+      "divisionCode": "WIL",
+      "divisionName": "Wilson Division"
+    },
+    {
+      "routeNo": "18",
+      "routeName": "Caledonia",
+      "divisionCode": "WIL",
+      "divisionName": "Wilson Division"
+    },
+    {
+      "routeNo": "33",
+      "routeName": "Forest Hill",
+      "divisionCode": "WIL",
+      "divisionName": "Wilson Division"
+    },
+    {
+      "routeNo": "47",
+      "routeName": "Lansdowne",
+      "divisionCode": "WIL",
+      "divisionName": "Wilson Division"
+    },
+    {
+      "routeNo": "59",
+      "routeName": "Maple Leaf",
+      "divisionCode": "WIL",
+      "divisionName": "Wilson Division"
+    },
+    {
+      "routeNo": "60",
+      "routeName": "Steeles West",
+      "divisionCode": "WIL",
+      "divisionName": "Wilson Division"
+    },
+    {
+      "routeNo": "61",
+      "routeName": "Avenue Road North",
+      "divisionCode": "WIL",
+      "divisionName": "Wilson Division"
+    },
+    {
+      "routeNo": "63",
+      "routeName": "Ossington",
+      "divisionCode": "WIL",
+      "divisionName": "Wilson Division"
+    },
+    {
+      "routeNo": "78",
+      "routeName": "St Andrews",
+      "divisionCode": "WIL",
+      "divisionName": "Wilson Division"
+    },
+    {
+      "routeNo": "89",
+      "routeName": "Weston",
+      "divisionCode": "WIL",
+      "divisionName": "Wilson Division"
+    },
+    {
+      "routeNo": "90",
+      "routeName": "Vaughan",
+      "divisionCode": "WIL",
+      "divisionName": "Wilson Division"
+    },
+    {
+      "routeNo": "97",
+      "routeName": "Yonge",
+      "divisionCode": "WIL",
+      "divisionName": "Wilson Division"
+    },
+    {
+      "routeNo": "98",
+      "routeName": "Willowdale-Senlac",
+      "divisionCode": "WIL",
+      "divisionName": "Wilson Division"
+    },
+    {
+      "routeNo": "101",
+      "routeName": "Downsview Park",
+      "divisionCode": "WIL",
+      "divisionName": "Wilson Division"
+    },
+    {
+      "routeNo": "104",
+      "routeName": "Faywood",
+      "divisionCode": "WIL",
+      "divisionName": "Wilson Division"
+    },
+    {
+      "routeNo": "105",
+      "routeName": "Dufferin North",
+      "divisionCode": "WIL",
+      "divisionName": "Wilson Division"
+    },
+    {
+      "routeNo": "106",
+      "routeName": "Sentinel",
+      "divisionCode": "WIL",
+      "divisionName": "Wilson Division"
+    },
+    {
+      "routeNo": "107",
+      "routeName": "Alness-Chesswood",
+      "divisionCode": "WIL",
+      "divisionName": "Wilson Division"
+    },
+    {
+      "routeNo": "109",
+      "routeName": "Ranee",
+      "divisionCode": "WIL",
+      "divisionName": "Wilson Division"
+    },
+    {
+      "routeNo": "115",
+      "routeName": "Silver Hills",
+      "divisionCode": "WIL",
+      "divisionName": "Wilson Division"
+    },
+    {
+      "routeNo": "118",
+      "routeName": "Thistle Down",
+      "divisionCode": "WIL",
+      "divisionName": "Wilson Division"
+    },
+    {
+      "routeNo": "124",
+      "routeName": "Sunnybrook",
+      "divisionCode": "WIL",
+      "divisionName": "Wilson Division"
+    },
+    {
+      "routeNo": "125",
+      "routeName": "Drewry",
+      "divisionCode": "WIL",
+      "divisionName": "Wilson Division"
+    },
+    {
+      "routeNo": "126",
+      "routeName": "Christie",
+      "divisionCode": "WIL",
+      "divisionName": "Wilson Division"
+    },
+    {
+      "routeNo": "160",
+      "routeName": "Bathurst North",
+      "divisionCode": "WIL",
+      "divisionName": "Wilson Division"
+    },
+    {
+      "routeNo": "166",
+      "routeName": "Toryork",
+      "divisionCode": "WIL",
+      "divisionName": "Wilson Division"
+    },
+    {
+      "routeNo": "184",
+      "routeName": "Ancaster Park",
+      "divisionCode": "WIL",
+      "divisionName": "Wilson Division"
+    },
+    {
+      "routeNo": "307",
+      "routeName": "Bathurst",
+      "divisionCode": "WIL",
+      "divisionName": "Wilson Division"
+    },
+    {
+      "routeNo": "363",
+      "routeName": "Ossington",
+      "divisionCode": "WIL",
+      "divisionName": "Wilson Division"
+    },
+    {
+      "routeNo": "960",
+      "routeName": "Steeles West Express",
+      "divisionCode": "WIL",
+      "divisionName": "Wilson Division"
+    },
+    {
+      "routeNo": "989",
+      "routeName": "Weston Express",
+      "divisionCode": "WIL",
+      "divisionName": "Wilson Division"
+    },
+    {
+      "routeNo": "300",
+      "routeName": "Bloor-Danforth",
+      "divisionCode": "SHARED",
+      "divisionName": "Shared / All Divisions"
+    },
+    {
+      "routeNo": "320",
+      "routeName": "Yonge",
+      "divisionCode": "SHARED",
+      "divisionName": "Shared / All Divisions"
+    }
+  ]
+}
