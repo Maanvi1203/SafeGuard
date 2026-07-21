@@ -61,7 +61,7 @@ img { max-width: 100%; display: block; }
 }
 .sidebar-nav { display: grid; gap: 6px; margin-top: 6px; }
 .nav-link { display: flex; align-items: center; gap: var(--sidebar-gap); padding: 0 12px; border-radius: 12px; color: rgba(255,255,255,.95); transition: background-color 160ms ease, transform 180ms ease, box-shadow 180ms ease; height: 52px; min-height: 52px; }
-.nav-link img, .sidebar-status img { width: var(--sidebar-icon-size); height: var(--sidebar-icon-size); filter: brightness(0) invert(1); opacity: .98; flex: 0 0 auto; }
+.nav-link img, .sidebar-status img { width: var(--sidebar-icon-size); height: var(--sidebar-icon-size); filter: brightness(0) invert(1); opacity: .98; flex: 0 0 auto; object-fit: contain; }
 .nav-label { font-weight: 500; white-space: nowrap; transition: opacity calc(var(--sidebar-transition) / 1.2) ease, transform calc(var(--sidebar-transition) / 1.2) ease; }
 .sidebar[data-collapsed="true"] .nav-label { opacity: 0; transform: translateX(-8px); pointer-events: none; }
 .nav-link:hover { background: rgba(255,255,255,.08); }
