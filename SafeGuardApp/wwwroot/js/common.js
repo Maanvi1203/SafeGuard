@@ -561,20 +561,15 @@ window.SafeGuardCommon = (() => {
       if (!sidebar) return;
       sidebar.setAttribute('aria-expanded', String(!collapsed));
       sidebar.dataset.collapsed = collapsed ? 'true' : 'false';
-      // Ensure toggle visibility and tooltip bindings when collapsed
-      const brand = sidebar.querySelector('.brand');
-      const toggle = sidebar.querySelector('[data-sidebar-toggle]');
-      if (collapsed && brand && toggle) {
-        // show toggle when hovering/focusing brand
-        brand.addEventListener('mouseenter', () => toggle.style.opacity = '1');
-        brand.addEventListener('focus', () => toggle.style.opacity = '1');
-        brand.addEventListener('mouseleave', () => toggle.style.opacity = '');
-        brand.addEventListener('blur', () => toggle.style.opacity = '');
-      }
-      if (collapsed) {
-        document.documentElement.style.setProperty('--app-shell-sidebar-width', 'var(--sidebar-collapsed-width)');
-      } else {
-        document.documentElement.style.setProperty('--app-shell-sidebar-width', 'var(--sidebar-expanded-width)');
+      // update app-shell width using computed CSS variables for smooth layout
+      try {
+        const root = getComputedStyle(document.documentElement);
+        const expanded = (root.getPropertyValue('--sidebar-expanded-width') || '260px').trim();
+        const collapsedVal = (root.getPropertyValue('--sidebar-collapsed-width') || '72px').trim();
+        document.documentElement.style.setProperty('--app-shell-sidebar-width', collapsed ? collapsedVal : expanded);
+      } catch (e) {
+        // fallback
+        document.documentElement.style.setProperty('--app-shell-sidebar-width', collapsed ? '72px' : '260px');
       }
       // update toggle button aria/state
       if (sidebarToggle) {
@@ -583,6 +578,20 @@ window.SafeGuardCommon = (() => {
       }
     }
     applySidebarState(isCollapsed);
+
+    // Bind brand hover/focus listeners once to reveal toggle when collapsed
+    try {
+      const brand = sidebar.querySelector('.brand');
+      const toggle = sidebar.querySelector('[data-sidebar-toggle]');
+      if (brand && toggle) {
+        // initialize toggle visibility
+        if (sidebar.dataset.collapsed === 'true') toggle.style.opacity = '';
+        brand.addEventListener('mouseenter', () => { if (sidebar.dataset.collapsed === 'true') toggle.style.opacity = '1'; });
+        brand.addEventListener('focus', () => { if (sidebar.dataset.collapsed === 'true') toggle.style.opacity = '1'; });
+        brand.addEventListener('mouseleave', () => { if (sidebar.dataset.collapsed === 'true') toggle.style.opacity = ''; });
+        brand.addEventListener('blur', () => { if (sidebar.dataset.collapsed === 'true') toggle.style.opacity = ''; });
+      }
+    } catch (_) {}
 
     function openSidebar() {
       sidebar?.classList.add('open');
