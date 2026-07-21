@@ -561,6 +561,16 @@ window.SafeGuardCommon = (() => {
       if (!sidebar) return;
       sidebar.setAttribute('aria-expanded', String(!collapsed));
       sidebar.dataset.collapsed = collapsed ? 'true' : 'false';
+      // Ensure toggle visibility and tooltip bindings when collapsed
+      const brand = sidebar.querySelector('.brand');
+      const toggle = sidebar.querySelector('[data-sidebar-toggle]');
+      if (collapsed && brand && toggle) {
+        // show toggle when hovering/focusing brand
+        brand.addEventListener('mouseenter', () => toggle.style.opacity = '1');
+        brand.addEventListener('focus', () => toggle.style.opacity = '1');
+        brand.addEventListener('mouseleave', () => toggle.style.opacity = '');
+        brand.addEventListener('blur', () => toggle.style.opacity = '');
+      }
       if (collapsed) {
         document.documentElement.style.setProperty('--app-shell-sidebar-width', 'var(--sidebar-collapsed-width)');
       } else {
