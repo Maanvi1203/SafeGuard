@@ -44,21 +44,6 @@ img { max-width: 100%; display: block; }
 .sidebar-toggle:hover { transform: translateY(-3px) scale(1.02); box-shadow: 0 10px 22px rgba(15,23,42,.16); }
 .sidebar-toggle:active { transform: translateY(0) scale(.98); }
 .brand small { display: block; color: rgba(255,255,255,.75); }
-
-/* When collapsed, hide the floating toggle until user hovers/focuses the brand (ttc logo) */
-.sidebar[data-collapsed="true"] .sidebar-toggle {
-    opacity: 0;
-    pointer-events: none;
-    transform: translateX(6px) rotate(180deg);
-    transition: opacity 200ms ease, transform 200ms ease;
-}
-.sidebar[data-collapsed="true"] .brand:hover + .sidebar-toggle,
-.sidebar[data-collapsed="true"] .brand:focus + .sidebar-toggle,
-.sidebar[data-collapsed="true"] .brand:focus-within + .sidebar-toggle {
-    opacity: 1;
-    pointer-events: auto;
-    transform: translateX(0) rotate(180deg);
-}
 .sidebar-nav { display: grid; gap: 6px; margin-top: 6px; }
 .nav-link { display: flex; align-items: center; gap: var(--sidebar-gap); padding: 0 12px; border-radius: 12px; color: rgba(255,255,255,.95); transition: background-color 160ms ease, transform 180ms ease, box-shadow 180ms ease; height: 52px; min-height: 52px; }
 .nav-link img, .sidebar-status img { width: var(--sidebar-icon-size); height: var(--sidebar-icon-size); filter: brightness(0) invert(1); opacity: .98; flex: 0 0 auto; }
